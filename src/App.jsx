@@ -4,9 +4,12 @@ import List from './List.jsx'
 import './App.css'
 import { StrictMode } from 'react'
 
-var nations_loaded = JSON.parse(localStorage.getItem('medal'));
+//var nations_loaded = JSON.parse(localStorage.getItem('medal'));
 export default function App() {
-  const [nation, setNation] = useState(nations_loaded);
+  const [nation, setNation] = useState([]);
+  // if(nations_loaded !== undefined){
+  //   setNation(nations_loaded);
+  // }
   const [flag,setflag] = useState(false);
   function nationCreate(name,gold,silver,bronze){
     console.log(name);
